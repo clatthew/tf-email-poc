@@ -7,8 +7,8 @@ sns_client = client("sns")
 def lambda_handler(event={}, context={}):
     email = {
         "TopicArn": environ["sns_topic_arn"],
-        "Message": "!!!!!!!! - with ❤️ from python",
-        "Subject": "🚨",
+        "Subject": "🚨 Critical Logs by ToteSys Ingest Function 🚨",
+        "Message": "The Ingest lambda function has created critical logs.\n\n🎨 ART NOT CODE 🖼",
     }
 
     sns_client.publish(**email)
